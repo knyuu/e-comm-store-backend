@@ -4,7 +4,8 @@ const app = express();
 const port = 3000;
 const cors = require("cors");
 const categoryRoutes = require('./routes/category');
-const brandRoutes = require('./routes/brand')
+const brandRoutes = require('./routes/brand');
+const productRoutes = require('./routes/product')
 
 // Khởi động server
 app.listen(port, () => {
@@ -36,4 +37,5 @@ connectDb();
 // Sử dụng route cho category
 app.use("/category", categoryRoutes);
 app.use("/brand", brandRoutes);
+app.use("/products", productRoutes)
 
